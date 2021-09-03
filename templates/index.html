@@ -8,5 +8,45 @@
 </head>
 <body>
     
+    <!-- Attempt 1
+    <table>
+    {% for key, value in users.items %}
+        <tr>
+            <th> {{ key }}</th>
+            <td> {{ value }}</td>
+        </tr>
+    {% endfor %}
+    </table>-->
+
+    <!-- Attempt 2 (py4u.net/discuss/21127)-->
+    <table>
+        <tr>
+        {% for dictionary in users %}
+            {% for key in dictionary %}
+                <tr>
+                    <td>
+                        <p>{{ key }}</p>
+                    </td>
+                    <td>
+                        <p>{{ dictionary[key] }}</p>
+                    </td>
+                </tr>
+            {% endfor %}
+        {% endfor %}
+        </tr>
+    </table>
+
+    <!-- Attempt 3 (py4u.net/discuss/21127)
+    <table>
+        {% for dict_item in users %}
+            {% for key, value in dict_item.items %}
+                <tr>
+                    <th>Key: {{ key }}</th>
+                    <td>Value: {{ value }}</td>
+                </tr>
+            {% endfor %}
+        {% endfor %}
+        </table>-->
+
 </body>
 </html>
