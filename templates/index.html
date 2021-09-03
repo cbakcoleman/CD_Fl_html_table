@@ -18,7 +18,7 @@
     {% endfor %}
     </table>-->
 
-    <!-- Attempt 2 (py4u.net/discuss/21127)-->
+    <!-- Attempt 2 (py4u.net/discuss/21127) BEGINS TO WORK
     <table>
         <tr>
         {% for dictionary in users %}
@@ -34,19 +34,29 @@
             {% endfor %}
         {% endfor %}
         </tr>
-    </table>
+    </table>-->
 
-    <!-- Attempt 3 (py4u.net/discuss/21127)
+    <!-- Attempt 4 (see CSS for Attempt 3)-->
+
     <table>
-        {% for dict_item in users %}
-            {% for key, value in dict_item.items %}
-                <tr>
-                    <th>Key: {{ key }}</th>
-                    <td>Value: {{ value }}</td>
-                </tr>
-            {% endfor %}
-        {% endfor %}
-        </table>-->
+        <thead>
+
+            <tr>
+                {% for user in users %}
+                    {% for k, v in user.items() %}
+                    <th>blue {{ key }}</th>
+                    <tr>
+                        <td> skadoo {{ user[key] }}</td>
+                    </tr>
+                    {% endfor %}
+                {% endfor %}
+            </tr>
+
+        </thead>
+        
+        
+        </table>
+
 
 </body>
 </html>
