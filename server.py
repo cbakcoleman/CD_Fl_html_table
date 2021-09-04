@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "TESTING SERVER"
+    return "le fromage est sur la table"
 
 @app.route('/table')
 def table():
